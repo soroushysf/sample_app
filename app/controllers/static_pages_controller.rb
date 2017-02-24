@@ -5,12 +5,12 @@ class StaticPagesController < ApplicationController
   def help
   end
     
-    def about
-    end
+  def about
+  end
     
-    def contact
-    end
-    def palindrome 
+  def contact
+  end
+  def palindrome 
         if params[:name].nil?
             params[:name] = ''
         end
@@ -23,8 +23,9 @@ class StaticPagesController < ApplicationController
         @palind = params[:name].reverse
         
         @shuffle =  params[:name].split('').shuffle.join
+      render "palindrome"
         
-    end
-    def test
-    end
+  end
+  def test
+  end
 end

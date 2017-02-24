@@ -10,7 +10,10 @@ class StaticPagesController < ApplicationController
     
     def contact
     end
-    def palindrome
+    def palindrome 
+        if params[:name].nil?
+            params[:name] = ''
+        end
         if params[:name].downcase == params[:name].downcase.reverse
             @pageTitle = "its a palindrome !"
         else

@@ -28,6 +28,11 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
         assert_response :success
         assert_select "title", "Contact | #{@base_title}"
     end
+    test "should get palindrome" do
+        get static_pages_palindrome_url
+        assert_response :success
+        assert_select "title", "Palindrome | #{@base_title}"
+    end
     
     test "should get root" do
         get root_url

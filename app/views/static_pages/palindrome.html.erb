@@ -1,0 +1,17 @@
+<% provide(:title, "Palindrome") %>
+
+<h1><%= @pageTitle %></h1>
+
+<p>your word in reverse is : <%= @palind %></p>
+<p>your word's lenght is : <%= @wordLength %></p>
+
+<p> shuffle word : <%= @shuffle %></p>
+
+
+<div class="routInfoP">
+
+<%= link_to('Home', {:action => 'home'}) %> |
+<%= link_to('About', {:action => 'about'}) %> |
+<%= link_to('Contact', {:action => 'contact'}) %> |
+<%= link_to('Help', {:action => 'help'}) %> 
+</div>

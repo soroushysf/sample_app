@@ -23,9 +23,7 @@ class StaticPagesController < ApplicationController
         @palind = params[:name].reverse
         
         @shuffle =  params[:name].split('').shuffle.join
-      render "palindrome"
         
   end
-  def test
-  end
+
 end

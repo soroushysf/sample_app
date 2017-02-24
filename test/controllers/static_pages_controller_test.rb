@@ -33,12 +33,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
         assert_response :success
         assert_select "title", "Palindrome | #{@base_title}"
     end
-    test "should get test" do
-        get static_pages_test_url
-        assert_response :success
-        assert_select "title", "#{@base_title}"
-    end
-    
+
     test "should get root" do
         get root_url
         assert_response :success

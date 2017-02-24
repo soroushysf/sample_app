@@ -25,4 +25,6 @@ class StaticPagesController < ApplicationController
 #        @shuffle =  params[:name].split('').shuffle.join
         
     end
+    def test
+    end
 end

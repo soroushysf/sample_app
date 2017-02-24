@@ -10,4 +10,16 @@ class StaticPagesController < ApplicationController
     
     def contact
     end
+    def palindrome
+        if params[:name].downcase == params[:name].downcase.reverse
+            @pageTitle = "its a palindrome !"
+        else
+            @pageTitle = "its not a palindrome !"
+        end
+        @wordLength = params[:name].length
+        @palind = params[:name].reverse
+        
+        @shuffle =  params[:name].split('').shuffle.join
+        
+    end
 end

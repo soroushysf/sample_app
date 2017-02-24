@@ -5,3 +5,15 @@
       <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
       sample application.
     </p>
+    
+       <%= form_tag("/static_pages/palindrome", method: "get") do %>
+       <%= label_tag(:name, "Type your word to check for Palindrome:") %>
+       <%= text_field_tag(:name) %>
+       <%= submit_tag("Enter") %>
+        <% end %>
+
+<div class="routInfo">
+<%= link_to('About', {:action => 'about'}) %> |
+<%= link_to('Contact', {:action => 'contact'}) %> |
+<%= link_to('Help', {:action => 'help'}) %>
+</div>

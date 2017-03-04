@@ -1,3 +1,30 @@
 <% provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
 <p>This will be a signup page for new users.</p>
+
+<% if !flash[:error].blank? %>
+      <div class="alert alert-danger">
+          <%= flash[:error] %>
+      </div> 
+<% end %>
+        
+<%= form_for(@user, :url => signup_path, :method => 'post') do |f| %>
+
+      <div>
+          <label>Name :</labellabel>
+          <div><%= f.text_field(:name) %></div>
+      </div>
+      <div style="margin-top : 10px !important">
+        <label>Email :</label>
+          <div><%= f.text_field(:email) %></div>
+      </div>
+      <div style="margin-top : 10px !important">
+        <label>Password : (at least 6 characters)</label>
+          <div><%= f.password_field(:password) %></div>
+      </div>
+
+    <div class="form-buttons" style="margin-top : 10px !important">
+        <%= f.submit("Create user") %>
+    </div>
+
+  <% end %>

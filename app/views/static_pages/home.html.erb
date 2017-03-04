@@ -11,23 +11,15 @@
     <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
 
+<% if !flash[:notice].blank? %>
+      <div class="alert alert-success">
+          <%= flash[:notice] %>
+      </div> 
+<% end %>
 <%= link_to image_tag("rails.png", alt: "Rails logo"),
             'http://rubyonrails.org/' %>
     
-<!--
 <%= link_to image_tag("kitten.png", alt: "Rails logo"),
-            'http://rubyonrails.org/' %>
+'http://rubyonrails.org/' %>
             
--->
-<!--
-       <%= form_tag("/static_pages/palindrome", method: "get") do %>
-       <%= label_tag(:name, "Type your word to check for Palindrome:") %>
-       <%= text_field_tag(:name) %>
-       <%= submit_tag("Enter") %>
-        <% end %>
 
-<div class="routInfo">
-<%= link_to('About', {:action => 'about'}) %> |
-<%= link_to('Contact', {:action => 'contact'}) %> |
-<%= link_to('Help', {:action => 'help'}) %>
-</div>-->

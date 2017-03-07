@@ -1,30 +1,26 @@
 <% provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
-<p>This will be a signup page for new users.</p>
 
-<% if !flash[:error].blank? %>
-      <div class="alert alert-danger">
-          <%= flash[:error] %>
-      </div> 
-<% end %>
+
         
-<%= form_for(@user, :url => signup_path, :method => 'post') do |f| %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user, url: signup_path) do |f| %>
+      <%= render 'shared/error_messages' %>
 
-      <div>
-          <label>Name :</labellabel>
-          <div><%= f.text_field(:name) %></div>
-      </div>
-      <div style="margin-top : 10px !important">
-        <label>Email :</label>
-          <div><%= f.text_field(:email) %></div>
-      </div>
-      <div style="margin-top : 10px !important">
-        <label>Password : (at least 6 characters)</label>
-          <div><%= f.password_field(:password) %></div>
-      </div>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
 
-    <div class="form-buttons" style="margin-top : 10px !important">
-        <%= f.submit("Create user") %>
-    </div>
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
 
-  <% end %>
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+      <%= f.submit "Create my account", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

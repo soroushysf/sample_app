@@ -88,8 +88,8 @@ Rails.application.configure do
       domain: "https://still-everglades-44161.herokuapp.com",
       authentication: "plain",
       enable_starttls_auto: true,
-      user_name: ENV["soroush.ysf@gmail.com"],
-      password: ENV["jamesbond3"]
+      user_name: "soroush.ysf@gmail.com",
+      password: "jamesbond3"
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to

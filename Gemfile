@@ -9,6 +9,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 
+gem 'sendgrid-rails', '~> 2.0'
 gem 'bcrypt',         '3.1.11'
 gem 'faker',          '1.6.6'
 gem 'will_paginate',           '3.1.0'
